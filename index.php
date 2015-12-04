@@ -64,7 +64,7 @@
     <div class="col-md-12 text-center">
       <form action="#" id="name" name="name" method="POST">
         <input type="text" class="search-input" placeholder="Full Name">
-        <input type="submit" class="button button-green" value="Start">
+        <input type="submit" class="button button-green" value="Create">
       </form>
     </div>
   <?php endif; ?>
