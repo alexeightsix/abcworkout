@@ -60,6 +60,14 @@
       <?php if (is_results()) : ?>    
       <div class="col-md-12 text-center">
         <h1>REPEAT IF NESSASSARY!</h1>
+            <?php if(is_results()) : ?>
+    <div class="col-md-12 text-center">
+      <form action="#" id="name" name="name" method="POST">
+        <input type="text" class="search-input" placeholder="Full Name">
+        <input type="submit" class="button button-green" value="Start">
+      </form>
+    </div>
+  <?php endif; ?>
       </div>
     <?php endif;?>
 

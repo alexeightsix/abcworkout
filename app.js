@@ -15,7 +15,6 @@
 
  $('.twitter').click(function(event) {
   event.preventDefault();
-  alert("test");
     var width  = 600,
         height = 600,
         left   = ($(window).width()  - width)  / 2,
