@@ -13,8 +13,22 @@
       <script src="http://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.2/html5shiv.js"></script>
       <script src="http://cdnjs.cloudflare.com/ajax/libs/respond.js/1.4.2/respond.js"></script>
 <![endif]-->
+
+<meta charset="utf-8">
+<meta name="description" content="USE YOUR FULL NAME, THAT'S THE WORKOUT!">
+<meta name="robots" content="index, follow">
+<meta property="og:title" content="ABC WOKROUT">
+<meta property="og:site_name" content="ABC Workout">
+<meta property="og:url" content="<?php echo $url;?>">
+<meta property="og:description" content="USE YOUR FULL NAME, THAT'S THE WORKOUT!">
+<meta property="og:type" content="website">
+<meta property="og:image" content="<?php echo URL;?>/abcworkout.jpg" />
+
 </head>
 <body <?php echo body_class();?>>
+
+<img style="width:0px; height:0px;" src="<?php echo $url;?>/abcworkout.jpg" />
+
 <div id="fb-root"></div>
 <script>(function(d, s, id) {
       var js, fjs = d.getElementsByTagName(s)[0];
@@ -49,13 +63,7 @@
     <?php endif;?>
 
    <?php echo social_icons();?>
-    <div class="col-md-12 text-center">
   
-      <div class="no-print">
-        <div class="fb-share-button" data-href="<?php echo $myUrl.$queryString;?>" data-layout="button"></div>
-        <a href="javascript:window.print();"><i class="fa fa-print"></i></a> </div>
-    </div>
-  </div>
 </div>
 
 <script src="https://code.jquery.com/jquery-1.11.3.min.js"></script> 

@@ -1,6 +1,7 @@
 <?php
 
-$myUrl = 'http://'.$_SERVER['HTTP_HOST'].$_SERVER['PHP_SELF'];
+$url = parse_url('http://'.$_SERVER['HTTP_HOST'].$_SERVER['PHP_SELF']);
+$url = "http://".$url['host'];
 
 function is_results() {
   if (empty($_GET)) {
@@ -109,7 +110,7 @@ function abc_title() {
 	if (is_results()) {
 		return 'ABCWorkout.me - Your Results - '.$_GET['name'];
 	} else { 
-		return 'ABCWorkout.me';
+		return 'USE YOUR FULL NAME, THAT\'S THE WORKOUT! - ABCWorkout.me';
 	} 
 
 }
@@ -149,12 +150,13 @@ $queryString = $_SERVER['QUERY_STRING'];
 
 
 function social_icons() {
+  global $url;
   $output = '<div class="text-center buttons-socialMedia">';
-  $output .='<a href="#" class="button-share"><i class="fa fa-facebook"></i> Share on Facebook</a>';
-  $output .='<a href="#" class="button-tweet"><i class="fa fa-twitter"></i> Tweet This</a>';
+  $output .='<a href="https://www.facebook.com/sharer/sharer.php?u='.urlencode($url).'" class="button-share fb-share"><i class="fa fa-facebook"></i> Share on Facebook</a>';
+  $output .='<a href="http://twitter.com/share?url='.$url.'&text='.urlencode('USE YOUR FULL NAME THAT\'S THE WORKOUT').'" class="button-tweet twitter"><i class="fa fa-twitter"></i> Tweet This</a>';
   if (is_results()) :
-    $output .='<a href="#" class="button-green"><i class="fa fa-print"></i> Print Workout</a>';
-    $output .='<a href="#" class="button-gray"><i class="fa fa-envelope"></i> Email Workout</a>';
+   // $output .='<a href="#" class="button-green"><i class="fa fa-print"></i> Print Workout</a>';
+   // $output .='<a href="#" class="button-gray"><i class="fa fa-envelope"></i> Email Workout</a>';
   endif;
   $output .='</div>';
   return $output;
