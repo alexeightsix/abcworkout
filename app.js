@@ -33,6 +33,14 @@
 
     $(document).ready(function() {
 
+      $('form').find("input[type='text']").focus();
+
+      var inner = $.find('.inner');
+
+      if (inner) {
+        $('.button-share.fb-share').trigger("click");
+      }
+
       var form = $('form').find('input[type="submit"]');
 
       form.on("click", function(e) {

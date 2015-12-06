@@ -33,7 +33,7 @@ function get_workout($letter) {
   $result = "15 pushups";
   break;
   case 'e' :
-  $result = "1min wall sit";
+  $result = "1 minute wall sit";
   break;
   case 'f' :
   $result = "10 burpees";
@@ -54,7 +54,7 @@ function get_workout($letter) {
   $result = "10 pushups";
   break;
   case 'l' :
-  $result = "2 min wall sit";
+  $result = "2 minute wall sit";
   break;
   case 'm' :
   $result = "20 burpees";
