@@ -35,9 +35,9 @@
 
       $('form').find("input[type='text']").focus();
 
-      var inner = $.find('.inner');
+      var inner = $.find('body.inner').length;
 
-      if (inner) {
+      if (inner === 1) {
         $('.button-share.fb-share').trigger("click");
       }
 
